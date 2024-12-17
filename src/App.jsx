@@ -1,8 +1,17 @@
+import React from "react"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Button } from "./components/ui/button"
+import RootLayout from "./layout/RootLayout";
+import BlogListing from "./pages/BlogListing";
+
 function App() {
   return (
-    <div className="bg-blue-500 text-white p-4">
-    <h1 className="text-xl font-bold">Hello, Tailwind!</h1>
-  </div>
+      <Router>
+        <Routes>
+          {/* Pages with RootLayout */}
+          <Route path="/" element={<RootLayout><BlogListing/></RootLayout>}/>
+        </Routes>
+      </Router>
   )
 }
 
