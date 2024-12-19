@@ -22,8 +22,10 @@ import { MdOutlineKeyboardArrowDown, MdClose } from "react-icons/md";
 import { useState, useEffect } from 'react';
 
 // components
-import MobileMenubar  from './MobileMenubar';
+import MobileMenubar from './MobileMenubar';
 
+
+import { Link } from 'react-router-dom';
 const Navbar = () => {
 
   const categories_data = [
@@ -67,13 +69,15 @@ const Navbar = () => {
             {/* Brand Name */}
             <div className='flex gap-10 justify-start items-center'>
               <NavigationMenuItem className='w-24'>
-                <img src="https://www.greycampus.com/hubfs/GreyCampus/icons/gc-logo.svg" alt="Brand_logo" />
+                <Link to={'/'}>
+                  <img src="https://www.greycampus.com/hubfs/GreyCampus/icons/gc-logo.svg" alt="Brand_logo" />
+                </Link>
               </NavigationMenuItem>
 
               <div className='flex gap-8 items-center'>
                 {/* Home */}
                 <NavigationMenuItem className='text-black  hover:text-blue-400 text-sm font-semibold min-w-fit'>
-                  <a href={'/'}>Home</a>
+                  <Link to={'/'}>Home</Link>
                 </NavigationMenuItem>
                 {/* Products */}
 

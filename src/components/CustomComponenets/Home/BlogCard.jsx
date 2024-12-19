@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { MdOutlineArrowOutward } from "react-icons/md";
-
+import { Link } from "react-router-dom";
 const BlogCard = ({img,author,createdAt,category,title,description,blogUrl}) => {
   return (
     <Card className="w-full max-w-md overflow-hidden rounded-none">
@@ -25,25 +25,25 @@ const BlogCard = ({img,author,createdAt,category,title,description,blogUrl}) => 
 
       {/* Card Content */}
       <CardContent className="p-4">
-        <a
-          href="#"
+        <Link
+          to={`blog/${blogUrl}`}
           className="text-lg font-semibold text-gray-900 hover:underline"
         >
           {title && title}
-        </a>
+        </Link>
         <p className="mt-2 text-sm text-gray-600 line-clamp-4">
           {description && description}
         </p>
 
         {/* Read Post */}
         <div className="mt-4">
-          <a
-            href={blogUrl && blogUrl}
+          <Link
+            to={`blog/${blogUrl}`}
             className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
           >
             <span>Read post</span>
             <span><MdOutlineArrowOutward/></span>
-          </a>
+          </Link>
         </div>
       </CardContent>
     </Card>
