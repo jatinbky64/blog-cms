@@ -10,6 +10,7 @@ const BlogCard = ({img,author,createdAt,category,title,description,blogUrl}) => 
         <img
           src={img && img}
           alt="Card background"
+          loading="lazy"
           className="h-60 w-full object-cover"
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 backdrop-blur-sm bg-[#ffffff7b] border-t border-gray-100">

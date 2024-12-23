@@ -1,21 +1,29 @@
-import React from "react"
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Button } from "./components/ui/button"
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layout/RootLayout";
 import BlogListing from "./pages/BlogListing";
 import BlogDetails from "./pages/BlogDetails";
 
-function App() {
-  return (
-      <Router>
-        <Routes>
-          {/* Pages with RootLayout */}
-          <Route path="/" element={<RootLayout><BlogListing/></RootLayout>}/>
-          <Route path="/blog/:id" element={<RootLayout><BlogDetails/></RootLayout>}/>
+// Define your routes using the createBrowserRouter API
+const routes = [
+  {
+    path: "/",
+    element: <RootLayout><BlogListing /></RootLayout>,
+  },
+  {
+    path: "/blog/:id",
+    element: <RootLayout><BlogDetails /></RootLayout>,
+  },
+];
 
-        </Routes>
-      </Router>
-  )
+const router = createBrowserRouter(routes, {
+  future: {
+    v7_relativeSplatPath: true, // Enable future flags
+  },
+});
+
+function App() {
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

@@ -9,7 +9,11 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <div className="text-center sm:text-left">
             <div className='mb-4 w-24'>
-            <img src="https://www.greycampus.com/hubfs/GreyCampus/icons/gc-logo.svg" alt="Brand_logo" className='filter grayscale brightness-[10]' />
+            <img 
+            src="https://www.greycampus.com/hubfs/GreyCampus/icons/gc-logo.svg"
+            alt="Brand_logo"
+            loading='lazy'
+            className='filter grayscale brightness-[10]' />
 
             </div>
             <p className="text-sm">© GreyCampus Edutech Private Limited. All rights reserved</p>

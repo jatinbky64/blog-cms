@@ -43,8 +43,8 @@ const RenderContent = ({ content }) => {
             {children?.map((listItem, index) => (
               <li className="list-disc text-base leading-[26px] font-normal text-neutral-700 mb-4" key={index}>
                 {listItem.children?.map((child, childIndex) => (
-                  <span className={` ${childIndex == 0 ? 'font-medium' : null} `}>
-                  <React.Fragment key={childIndex}>
+                  <span className={` ${childIndex == 0 ? 'font-medium' : null} `} key={childIndex}>
+                  <React.Fragment >
                     {renderNode(child)}
                   </React.Fragment>
                   </span>

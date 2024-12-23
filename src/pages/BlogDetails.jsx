@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import { FaFacebookF, FaTwitter, FaShareAlt } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 import useFetch from '@/hooks/useFetch';
-import { data } from 'autoprefixer';
 import RenderContent from '@/components/CustomComponenets/BlogDetails/RenderContent';
 const BlogDetails = () => {
 
@@ -49,7 +48,11 @@ const BlogDetails = () => {
             <div className='flex items-center gap-2'>
     
               <div className='rounded-full w-10 h-10 border border-black overflow-hidden'>
-                <img src={`http://localhost:1337${blogDetails && blogDetails?.data[0]?.blog?.featuredimage?.formats?.thumbnail?.url}`} alt="avatar" className='object-cover w-full h-full' />
+                <img 
+                src={`http://localhost:1337${blogDetails && blogDetails?.data[0]?.blog?.featuredimage?.formats?.thumbnail?.url}`} 
+                alt="avatar" 
+                loading='lazy'
+                className='object-cover w-full h-full' />
               </div>
               <div>
                 <p className='text-xs font-bold text-primary'>{blogDetails && blogDetails?.data[0]?.blog?.blogauthor}</p>
@@ -72,7 +75,10 @@ const BlogDetails = () => {
          <div className='w-full'>
            <div className='mb-6'>
              <div className='w-full rounded-2xl overflow-hidden h-80'>
-               <img src={`http://localhost:1337${blogDetails && blogDetails?.data[0]?.blog?.featuredimage?.formats?.thumbnail?.url}`} alt="breaking-bad" className='h-full w-full object-cover' />
+               <img src={`http://localhost:1337${blogDetails && blogDetails?.data[0]?.blog?.featuredimage?.formats?.thumbnail?.url}`} 
+               alt="breaking-bad" 
+               loading='lazy'
+               className='h-full w-full object-cover' />
              </div>
    
              {/* <p className='text-neutral-700  text-xs text-center mt-2'>Breaking bad</p> */}

@@ -19,6 +19,7 @@ import {
 import { Input } from '@/components/ui/input'
 // React icons
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 
 
@@ -80,6 +81,7 @@ const MobileMenubar = () => {
                             <img
                                 src="https://www.greycampus.com/hubfs/GreyCampus/icons/gc-logo.svg"
                                 alt="Brand_logo"
+                                loading='lazy'
                             />
                         </div>
                         <div>
@@ -94,7 +96,7 @@ const MobileMenubar = () => {
                             <NavigationMenuList className='flex-col w-full '>
                                         {/* Home */}
                                         <NavigationMenuItem className='text-black  hover:text-blue-400 text-sm font-semibold  border-b w-full py-4 px-4 space-x-0'>
-                                            <a href={'/'}>Home</a>
+                                            <Link to={'/'}>Home</Link>
                                         </NavigationMenuItem>
                                         {/* Products */}
 
@@ -107,7 +109,7 @@ const MobileMenubar = () => {
                                                 <ul className="flex flex-col gap-3 p-4 pl-4 pr-16 w-max">
                                                     {categories_data.map((component) => (
                                                         <li key={component.title} className='hover:text-blue-400 text-xs '>
-                                                            <a href={component.href}>{component.title}</a>
+                                                            <Link to={component.href}>{component.title}</Link>
                                                         </li>
                                                     ))}
                                                 </ul>
@@ -125,7 +127,7 @@ const MobileMenubar = () => {
                                                 <ul className="flex flex-col gap-3 p-4 pl-4 pr-16 w-max">
                                                     {categories_data.map((component) => (
                                                         <li key={component.title} className='hover:text-blue-400 text-xs '>
-                                                            <a href={component.href}>{component.title}</a>
+                                                            <Link to={component.href}>{component.title}</Link>
                                                         </li>
                                                     ))}
                                                 </ul>
@@ -134,16 +136,16 @@ const MobileMenubar = () => {
 
                                         {/* Pricing */}
                                         <NavigationMenuItem className='text-black  hover:text-blue-400 text-sm font-semibold border-b w-full py-4 px-4'>
-                                            <a href={'/'}>Pricing</a>
+                                            <Link to={'/'}>Pricing</Link>
                                         </NavigationMenuItem>
 
                               
                               {/* Auth */}
                               <NavigationMenuItem className='text-black  hover:text-blue-400 text-sm font-semibold border-b w-full py-4 px-4'>
-                                            <a href={'/'}>Log in</a>
+                                            <Link to={'/'}>Log in</Link>
                                         </NavigationMenuItem>
                                         <NavigationMenuItem className='text-black  hover:text-blue-400 text-sm font-semibold border-b w-full py-4 px-4'>
-                                            <a href={'/'}>Sign up</a>
+                                            <Link to={'/'}>Sign up</Link>
                                         </NavigationMenuItem>
                             </NavigationMenuList>
                     </NavigationMenu>

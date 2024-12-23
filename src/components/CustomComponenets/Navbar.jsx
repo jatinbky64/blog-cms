@@ -90,7 +90,7 @@ const Navbar = () => {
                     <ul className="flex flex-col gap-3 p-4 pl-4 pr-16 w-max">
                       {categories_data.map((component) => (
                         <li key={component.title} className='hover:text-blue-400 text-xs '>
-                          <a href={component.href}>{component.title}</a>
+                          <Link to={component.href}>{component.title}</Link>
                         </li>
                       ))}
                     </ul>
@@ -108,7 +108,7 @@ const Navbar = () => {
                     <ul className="flex flex-col gap-3 p-4 pl-4 pr-16 w-max">
                       {categories_data.map((component) => (
                         <li key={component.title} className='hover:text-blue-400 text-xs '>
-                          <a href={component.href}>{component.title}</a>
+                          <Link to={component.href}>{component.title}</Link>
                         </li>
                       ))}
                     </ul>
@@ -117,7 +117,7 @@ const Navbar = () => {
 
                 {/* Pricing */}
                 <NavigationMenuItem className='text-black  hover:text-blue-400 text-sm font-semibold min-w-fit'>
-                  <a href={'/'}>Pricing</a>
+                  <Link to={'/'}>Pricing</Link>
                 </NavigationMenuItem>
               </div>
             </div>
