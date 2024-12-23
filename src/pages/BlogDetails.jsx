@@ -6,12 +6,11 @@ import useFetch from '@/hooks/useFetch';
 import RenderContent from '@/components/CustomComponenets/BlogDetails/RenderContent';
 const BlogDetails = () => {
 
-  // http://localhost:1337/api/blog-details/?populate=*&filters[blog][id][$eq]=21
   const { id } = useParams()
 
   // Fetch blog-details
   const { data: blogDetails, loading: blogDetailLoading, error: blogDetailsError } = useFetch(
-    `http://localhost:1337/api/blog-details/?populate[blog][populate]=featuredimage&filters[blog][id][$eq]=${id}
+    `https://pretty-splendor-eb24c6e22f.strapiapp.com/api/blog-details/?populate[blog][populate]=featuredimage&filters[blog][id][$eq]=${id}
 `
   );
 
@@ -49,7 +48,7 @@ const BlogDetails = () => {
     
               <div className='rounded-full w-10 h-10 border border-black overflow-hidden'>
                 <img 
-                src={`http://localhost:1337${blogDetails && blogDetails?.data[0]?.blog?.featuredimage?.formats?.thumbnail?.url}`} 
+                src={blogDetails && blogDetails?.data[0]?.blog?.featuredimage?.formats?.thumbnail?.url}
                 alt="avatar" 
                 loading='lazy'
                 className='object-cover w-full h-full' />
@@ -75,7 +74,7 @@ const BlogDetails = () => {
          <div className='w-full'>
            <div className='mb-6'>
              <div className='w-full rounded-2xl overflow-hidden h-80'>
-               <img src={`http://localhost:1337${blogDetails && blogDetails?.data[0]?.blog?.featuredimage?.formats?.thumbnail?.url}`} 
+               <img src={blogDetails && blogDetails?.data[0]?.blog?.featuredimage?.formats?.thumbnail?.url}
                alt="breaking-bad" 
                loading='lazy'
                className='h-full w-full object-cover' />

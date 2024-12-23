@@ -22,7 +22,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 export function BlogTabs() {
   // Fetch blogs
   const { data: blogsData, loading: blogsLoading, error: blogsError } = useFetch(
-    "http://localhost:1337/api/blogs?populate=*"
+    "https://pretty-splendor-eb24c6e22f.strapiapp.com/api/blogs?populate=*"
   );
 
   // Fetch Categories
@@ -30,7 +30,7 @@ export function BlogTabs() {
     data: categoriesData,
     loading: categoriesLoading,
     error: categoriesError,
-  } = useFetch("http://localhost:1337/api/categories?populate=*");
+  } = useFetch("https://pretty-splendor-eb24c6e22f.strapiapp.com/api/categories?populate=*");
 
   return (
     <Tabs defaultValue="View all" className="w-full">
@@ -91,7 +91,7 @@ export function BlogTabs() {
             blogsData.data.map((res) => (
               <BlogCard
                 key={res.id}
-                img={`http://localhost:1337${res?.featuredimage?.url}`}
+                img={res?.featuredimage?.url}
                 author={res?.blogauthor}
                 createdAt={res?.createdAt}
                 category={res?.categories[0]?.category_name}
@@ -143,7 +143,7 @@ export function BlogTabs() {
                   .map((res) => (
                     <BlogCard
                       key={res.id}
-                      img={`http://localhost:1337${res?.featuredimage?.url}`}
+                      img={res?.featuredimage?.url}
                       author={res?.blogauthor}
                       createdAt={res?.createdAt}
                       category={res?.categories[0]?.category_name}
