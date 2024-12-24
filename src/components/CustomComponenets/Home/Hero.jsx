@@ -18,7 +18,7 @@ const Hero = () => {
 
             </div>
           </div>
-          <div className='text-description font-medium text-xl'>
+          <div className='text-description font-medium text-xl md:mt-0 mt-4'>
             <p>
               New product features, the latest in technologies, solutions & updates.
             </p>
