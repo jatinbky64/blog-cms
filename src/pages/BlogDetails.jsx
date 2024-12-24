@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import useFetch from '@/hooks/useFetch';
 import RenderContent from '@/components/CustomComponenets/BlogDetails/RenderContent';
 import SkeltonLoader from '@/components/CustomComponenets/BlogDetails/SkeltonLoader';
-
+import { removeTimeFromCreatedAt } from '@/utils/removeTimeFromCreatedAt';
 const BlogDetails = () => {
 
   const { id } = useParams()
@@ -52,7 +52,7 @@ const BlogDetails = () => {
               </div>
               <div>
                 <p className='text-xs font-bold text-primary'>{blogDetails && blogDetails?.data[0]?.blog?.blogauthor}</p>
-                <p className='text-xs font-semibold text-slate-400'>{blogDetails && blogDetails?.data[0]?.createdAt}</p>
+                <p className='text-xs font-semibold text-slate-400'>{blogDetails && removeTimeFromCreatedAt( blogDetails?.data[0]?.createdAt)}</p>
               </div>
 
             </div>

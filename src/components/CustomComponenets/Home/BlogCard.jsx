@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { removeTimeFromCreatedAt } from "@/utils/removeTimeFromCreatedAt";
 const BlogCard = ({img,author,createdAt,category,title,description,blogUrl}) => {
   return (
     <Card className="w-full max-w-md overflow-hidden rounded-none">
@@ -17,7 +18,7 @@ const BlogCard = ({img,author,createdAt,category,title,description,blogUrl}) => 
           <div className="flex justify-between items-center text-white text-sm">
             <div>
               <p className="font-semibold">{author && author}</p>
-              <p className="text-xs">{createdAt && createdAt}</p>
+              <p className="text-xs">{createdAt && removeTimeFromCreatedAt(createdAt)}</p>
             </div>
             <p className="text-xs font-semibold">{category && category}</p>
           </div>
