@@ -37,10 +37,10 @@ export function BlogTabs() {
       <TabsList className="w-full flex items-end justify-start gap-10 bg-transparent border-b rounded-none p-0 mb-14 overflow-x-auto">
         {categoriesLoading && (
           <div className="flex gap-10 mb-2 overflow-x-auto">
-            <Skeleton className="h-8 w-40 rounded-lg" />
-            <Skeleton className="h-8 w-40" />
-            <Skeleton className="h-8 w-40" />
-            <Skeleton className="h-8 w-40" />
+            <Skeleton className="h-8 w-40 rounded-none" />
+            <Skeleton className="h-8 w-40 rounded-none" />
+            <Skeleton className="h-8 w-40 rounded-none" />
+            <Skeleton className="h-8 w-40 rounded-none" />
           </div>
         )}
 

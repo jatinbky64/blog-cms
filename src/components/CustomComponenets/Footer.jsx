@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-blue-500 text-white py-10 mt-16 px-16">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-center">
-          <div className="text-center sm:text-left">
+          <div className="text-left">
             <div className='mb-4 w-24'>
             <img 
             src="https://www.greycampus.com/hubfs/GreyCampus/icons/gc-logo.svg"

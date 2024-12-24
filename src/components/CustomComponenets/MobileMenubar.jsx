@@ -98,41 +98,6 @@ const MobileMenubar = () => {
                                         <NavigationMenuItem className='text-black  hover:text-blue-400 text-sm font-semibold  border-b w-full py-4 px-4 space-x-0'>
                                             <Link to={'/'}>Home</Link>
                                         </NavigationMenuItem>
-                                        {/* Products */}
-
-                                        <HoverCard openDelay={0} closeDelay={0} className='space-x-0'>
-                                            <HoverCardTrigger className='text-black  data-[state=open]:text-blue-400 text-sm font-semibold hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent p-0 cursor-pointer flex items-center gap-1 border-b w-full py-4 px-4 justify-between'>
-                                                <span>Products</span>
-                                                <span className='text-xl'><MdOutlineKeyboardArrowDown /></span>
-                                            </HoverCardTrigger>
-                                            <HoverCardContent>
-                                                <ul className="flex flex-col gap-3 p-4 pl-4 pr-16 w-max">
-                                                    {categories_data.map((component) => (
-                                                        <li key={component.title} className='hover:text-blue-400 text-xs '>
-                                                            <Link to={component.href}>{component.title}</Link>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </HoverCardContent>
-                                        </HoverCard>
-
-
-                                        {/* Resources */}
-                                        <HoverCard openDelay={0} closeDelay={0}>
-                                            <HoverCardTrigger className='text-black  data-[state=open]:text-blue-400 text-sm font-semibold hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent p-0 cursor-pointer flex items-center gap-1 border-b w-full py-4 px-4 justify-between'>
-                                                <span>Resources</span>
-                                                <span className='text-xl'><MdOutlineKeyboardArrowDown /></span>
-                                            </HoverCardTrigger>
-                                            <HoverCardContent>
-                                                <ul className="flex flex-col gap-3 p-4 pl-4 pr-16 w-max">
-                                                    {categories_data.map((component) => (
-                                                        <li key={component.title} className='hover:text-blue-400 text-xs '>
-                                                            <Link to={component.href}>{component.title}</Link>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </HoverCardContent>
-                                        </HoverCard>
 
                                         {/* Pricing */}
                                         <NavigationMenuItem className='text-black  hover:text-blue-400 text-sm font-semibold border-b w-full py-4 px-4'>
