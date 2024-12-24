@@ -39,9 +39,9 @@ const RenderContent = ({ content }) => {
       case "list":
         const ListTag = format === "ordered" ? "ol" : "ul"; // Determine list type
         return (
-          <ListTag className="list-outside">
+          <ListTag className="list-outside list-disc ">
             {children?.map((listItem, index) => (
-              <li className="list-disc text-base leading-[26px] font-normal text-neutral-700 mb-4" key={index}>
+              <li className="text-base leading-[26px] font-normal text-neutral-700 mb-4" key={index}>
                 {listItem.children?.map((child, childIndex) => (
                   <span className={` ${childIndex == 0 ? 'font-medium' : null} `} key={childIndex}>
                   <React.Fragment >
