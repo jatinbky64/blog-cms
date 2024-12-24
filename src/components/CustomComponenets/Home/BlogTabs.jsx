@@ -34,7 +34,7 @@ export function BlogTabs() {
 
   return (
     <Tabs defaultValue="View all" className="w-full">
-      <TabsList className="w-full flex items-end justify-start gap-10 bg-transparent border-b rounded-none p-0 mb-14">
+      <TabsList className="w-full flex items-end justify-start gap-10 bg-transparent border-b rounded-none p-0 mb-14 overflow-x-auto">
         {categoriesLoading && (
           <div className="flex gap-10 mb-2">
             <Skeleton className="h-8 w-40 rounded-lg" />
