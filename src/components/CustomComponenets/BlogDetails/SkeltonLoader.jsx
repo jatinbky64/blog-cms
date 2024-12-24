@@ -5,8 +5,8 @@ const SkeltonLoader = () => {
     return (
         <div className='mx-auto xl:max-w-3xl max-w-6xl mt-14'>
             <Skeleton className='w-full h-10 rounded' />
-            <Skeleton className='w-80 h-10 rounded-none mt-2' />
-            <div className='px-6 mt-4 flex justify-between items-center'>
+            <Skeleton className='sm:w-80 w-full h-10 rounded-none mt-2' />
+            <div className='px-6 mt-4 sm:flex hidden justify-between items-center '>
                 <div className='flex gap-4 items-center'>
                     <Skeleton className='rounded-full w-12 h-12' />
 

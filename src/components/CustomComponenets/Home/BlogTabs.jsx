@@ -36,7 +36,7 @@ export function BlogTabs() {
     <Tabs defaultValue="View all" className="w-full">
       <TabsList className="w-full flex items-end justify-start gap-10 bg-transparent border-b rounded-none p-0 mb-14 overflow-x-auto">
         {categoriesLoading && (
-          <div className="flex gap-10 mb-2">
+          <div className="flex gap-10 mb-2 overflow-x-auto">
             <Skeleton className="h-8 w-40 rounded-lg" />
             <Skeleton className="h-8 w-40" />
             <Skeleton className="h-8 w-40" />
@@ -70,7 +70,7 @@ export function BlogTabs() {
 
       {/* View all tabs content */}
       <TabsContent value="View all">
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 overflow-hidden">
           {blogsLoading && (
             <>
               <SkeltonLoading />
