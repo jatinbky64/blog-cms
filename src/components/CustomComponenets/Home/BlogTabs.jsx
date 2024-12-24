@@ -45,12 +45,16 @@ export function BlogTabs() {
         )}
 
         {/* View all tabs */}
+        {
+          categoriesData &&
+        
         <TabsTrigger
           value="View all"
           className="disabled:opacity-100 data-[state=active]:bg-transparent data-[state=active]:text-primary data-[state=active]:shadow-none shadow-none p-0 py-1 border-b-2 border-transparent data-[state=active]:border-black font-semibold rounded-none"
         >
           <span className="cursor-pointer w-full h-full capitalize">View all</span>
         </TabsTrigger>
+        }
 
         {categoriesData &&
           categoriesData.data.map((category) => (
