@@ -76,20 +76,20 @@ const Navbar = () => {
 
               <div className='flex gap-8 items-center'>
                 {/* Home */}
-                <NavigationMenuItem className='text-black  hover:text-blue-400 text-sm font-semibold min-w-fit'>
+                <NavigationMenuItem className='text-black   text-sm font-semibold min-w-fit'>
                   <Link to={'/'}>Home</Link>
                 </NavigationMenuItem>
                 {/* Products */}
 
                 <HoverCard openDelay={0} closeDelay={0}>
-                  <HoverCardTrigger className='text-black  data-[state=open]:text-blue-400 text-sm font-semibold hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent p-0 cursor-pointer flex items-center gap-1'>
+                  <HoverCardTrigger className='text-black text-sm font-semibold hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent p-0 cursor-pointer flex items-center gap-1'>
                     <span>Products</span>
                     <span className='text-xl'><MdOutlineKeyboardArrowDown /></span>
                   </HoverCardTrigger>
                   <HoverCardContent>
                     <ul className="flex flex-col gap-3 p-4 pl-4 pr-16 w-max">
                       {categories_data.map((component) => (
-                        <li key={component.title} className='hover:text-blue-400 text-xs '>
+                        <li key={component.title} className=' text-xs '>
                           <Link to={component.href}>{component.title}</Link>
                         </li>
                       ))}
@@ -100,14 +100,14 @@ const Navbar = () => {
 
                 {/* Resources */}
                 <HoverCard openDelay={0} closeDelay={0}>
-                  <HoverCardTrigger className='text-black  data-[state=open]:text-blue-400 text-sm font-semibold hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent p-0 cursor-pointer flex items-center gap-1'>
+                  <HoverCardTrigger className='text-black text-sm font-semibold hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent p-0 cursor-pointer flex items-center gap-1'>
                     <span>Resources</span>
                     <span className='text-xl'><MdOutlineKeyboardArrowDown /></span>
                   </HoverCardTrigger>
                   <HoverCardContent>
                     <ul className="flex flex-col gap-3 p-4 pl-4 pr-16 w-max">
                       {categories_data.map((component) => (
-                        <li key={component.title} className='hover:text-blue-400 text-xs '>
+                        <li key={component.title} className=' text-xs '>
                           <Link to={component.href}>{component.title}</Link>
                         </li>
                       ))}
@@ -116,7 +116,7 @@ const Navbar = () => {
                 </HoverCard>
 
                 {/* Pricing */}
-                <NavigationMenuItem className='text-black  hover:text-blue-400 text-sm font-semibold min-w-fit'>
+                <NavigationMenuItem className='text-black   text-sm font-semibold min-w-fit'>
                   <Link to={'/'}>Pricing</Link>
                 </NavigationMenuItem>
               </div>
@@ -124,10 +124,10 @@ const Navbar = () => {
 
             <div className='flex gap-2'>
               <NavigationMenuItem>
-                <Button className='bg-transparent text-primary shadow-none hover:bg-blue-400 hover:text-accent rounded-2xl text-sm font-semibold'>Log in</Button>
+                <Button className='bg-transparent text-primary shadow-none  hover:text-accent rounded-2xl text-sm font-semibold'>Log in</Button>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Button className='shadow-none bg-blue-400 hover:bg-blue-400 text-accent rounded-2xl text-sm font-semibold'>Sign up</Button>
+                <Button className='shadow-none text-accent rounded-2xl text-sm font-semibold'>Sign up</Button>
               </NavigationMenuItem>
             </div>
           </NavigationMenuList>

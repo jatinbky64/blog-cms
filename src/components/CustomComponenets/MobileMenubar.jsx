@@ -97,21 +97,21 @@ const MobileMenubar = () => {
 
                             <NavigationMenuList className='flex-col w-full '>
                                         {/* Home */}
-                                        <NavigationMenuItem onClick={closeDrawer} className='text-black  hover:text-blue-400 text-sm font-semibold  border-b w-full py-4 px-4 space-x-0'>
+                                        <NavigationMenuItem onClick={closeDrawer} className='text-black   text-sm font-semibold  border-b w-full py-4 px-4 space-x-0'>
                                             <Link to={'/'}>Home</Link>
                                         </NavigationMenuItem>
 
                                         {/* Pricing */}
-                                        <NavigationMenuItem onClick={closeDrawer} className='text-black  hover:text-blue-400 text-sm font-semibold border-b w-full py-4 px-4'>
+                                        <NavigationMenuItem onClick={closeDrawer} className='text-black   text-sm font-semibold border-b w-full py-4 px-4'>
                                             <Link to={'/'}>Pricing</Link>
                                         </NavigationMenuItem>
 
                               
                               {/* Auth */}
-                              <NavigationMenuItem onClick={closeDrawer} className='text-black  hover:text-blue-400 text-sm font-semibold border-b w-full py-4 px-4'>
+                              <NavigationMenuItem onClick={closeDrawer} className='text-black   text-sm font-semibold border-b w-full py-4 px-4'>
                                             <Link to={'/'}>Log in</Link>
                                         </NavigationMenuItem>
-                                        <NavigationMenuItem onClick={closeDrawer} className='text-black  hover:text-blue-400 text-sm font-semibold border-b w-full py-4 px-4'>
+                                        <NavigationMenuItem onClick={closeDrawer} className='text-black   text-sm font-semibold border-b w-full py-4 px-4'>
                                             <Link to={'/'}>Sign up</Link>
                                         </NavigationMenuItem>
                             </NavigationMenuList>
