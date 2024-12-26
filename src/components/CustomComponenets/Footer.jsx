@@ -10,10 +10,10 @@ const Footer = () => {
           <div className="text-left">
             <div className='mb-4 w-24'>
             <img 
-            src="https://www.greycampus.com/hubfs/GreyCampus/icons/gc-logo.svg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Medium_%28website%29_logo.svg/798px-Medium_%28website%29_logo.svg.png"
             alt="Brand_logo"
             loading='lazy'
-            className='filter grayscale brightness-[10]' />
+            className='filter invert brightness-200 contrast-150' />
 
             </div>
             <p className="text-sm">© GreyCampus Edutech Private Limited. All rights reserved</p>

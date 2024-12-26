@@ -81,7 +81,7 @@ const MobileMenubar = () => {
                     <div className="flex justify-between items-center px-4 py-2 border-b">
                         <div className="w-24">
                             <img
-                                src="https://www.greycampus.com/hubfs/GreyCampus/icons/gc-logo.svg"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Medium_%28website%29_logo.svg/798px-Medium_%28website%29_logo.svg.png"
                                 alt="Brand_logo"
                                 loading='lazy'
                             />

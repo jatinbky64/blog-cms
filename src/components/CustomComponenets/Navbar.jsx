@@ -70,7 +70,7 @@ const Navbar = () => {
             <div className='flex gap-10 justify-start items-center'>
               <NavigationMenuItem className='w-24'>
                 <Link to={'/'}>
-                  <img src="https://www.greycampus.com/hubfs/GreyCampus/icons/gc-logo.svg" alt="Brand_logo" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Medium_%28website%29_logo.svg/798px-Medium_%28website%29_logo.svg.png" alt="Brand_logo" />
                 </Link>
               </NavigationMenuItem>
 
