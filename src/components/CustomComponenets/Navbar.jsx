@@ -16,7 +16,8 @@ import { Input } from '@/components/ui/input'
 import { Button } from '../ui/button';
 
 // React icons
-import { MdOutlineKeyboardArrowDown, MdClose } from "react-icons/md";
+import { ArrowDownIcon} from '@heroicons/react/solid';
+
 
 //hooks
 import { useState, useEffect } from 'react';
@@ -84,7 +85,7 @@ const Navbar = () => {
                 <HoverCard openDelay={0} closeDelay={0}>
                   <HoverCardTrigger className='text-black text-sm font-semibold hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent p-0 cursor-pointer flex items-center gap-1'>
                     <span>Products</span>
-                    <span className='text-xl'><MdOutlineKeyboardArrowDown /></span>
+                    <span className='text-xl'><ArrowDownIcon /></span>
                   </HoverCardTrigger>
                   <HoverCardContent>
                     <ul className="flex flex-col gap-3 p-4 pl-4 pr-16 w-max">
@@ -102,7 +103,7 @@ const Navbar = () => {
                 <HoverCard openDelay={0} closeDelay={0}>
                   <HoverCardTrigger className='text-black text-sm font-semibold hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent p-0 cursor-pointer flex items-center gap-1'>
                     <span>Resources</span>
-                    <span className='text-xl'><MdOutlineKeyboardArrowDown /></span>
+                    <span className='text-xl'><ArrowDownIcon /></span>
                   </HoverCardTrigger>
                   <HoverCardContent>
                     <ul className="flex flex-col gap-3 p-4 pl-4 pr-16 w-max">

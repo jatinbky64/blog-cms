@@ -1,13 +1,12 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { FaFacebookF, FaTwitter, FaShareAlt } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 import useFetch from '@/hooks/useFetch';
 import RenderContent from '@/components/CustomComponenets/BlogDetails/RenderContent';
 import SkeltonLoader from '@/components/CustomComponenets/BlogDetails/SkeltonLoader';
 import { removeTimeFromCreatedAt } from '@/utils/removeTimeFromCreatedAt';
 const BlogDetails = () => {
-
+  
   const { id } = useParams()
 
   // Fetch blog-details
@@ -57,9 +56,9 @@ const BlogDetails = () => {
 
             </div>
             <div className='flex gap-3 items-center'>
-              <span className='w-8 h-8 rounded-full flex justify-center items-center bg-slate-300 text-white'><FaFacebookF /></span>
+              {/* <span className='w-8 h-8 rounded-full flex justify-center items-center bg-slate-300 text-white'><FaFacebookF /></span>
               <span className='w-8 h-8 rounded-full flex justify-center items-center bg-slate-300 text-white'><FaTwitter /></span>
-              <span className='w-8 h-8 rounded-full flex justify-center items-center bg-slate-300 text-white'><FaShareAlt /></span>
+              <span className='w-8 h-8 rounded-full flex justify-center items-center bg-slate-300 text-white'><FaShareAlt /></span> */}
             </div>
           </div>
 

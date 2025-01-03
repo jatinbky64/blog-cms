@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Drawer, DrawerContent, DrawerTrigger } from '../ui/drawer';
 import { Button } from '../ui/button';
-import { RxHamburgerMenu } from "react-icons/rx";
-import { MdClose } from "react-icons/md";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -17,8 +15,11 @@ import {
     HoverCardTrigger,
 } from "@/components/ui/hover-card"
 import { Input } from '@/components/ui/input'
-// React icons
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+
+// Hero icons
+import {ChartBarIcon, XIcon} from '@heroicons/react/solid'
+
+
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -73,7 +74,7 @@ const MobileMenubar = () => {
             >
                 <DrawerTrigger asChild>
                     <Button size="icon" onClick={toggleDrawer}>
-                        <RxHamburgerMenu />
+                        <ChartBarIcon />
                     </Button>
                 </DrawerTrigger>
 
@@ -88,7 +89,7 @@ const MobileMenubar = () => {
                         </div>
                         <div>
                             <Button size="icon" variant="ghost" onClick={closeDrawer}>
-                                <MdClose />
+                                <XIcon />
                             </Button>
                         </div>
                     </div>
